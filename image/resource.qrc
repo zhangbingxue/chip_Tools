@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>ICT.png</file>
+        <file>DFE.png</file>
+        <file>splash.gif</file>
+    </qresource>
+</RCC>
