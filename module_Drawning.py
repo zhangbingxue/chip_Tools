@@ -38,23 +38,22 @@ class Module_Drawning(QWidget):
             for i in self.list:
                 points = [QPoint(0, (9.5+i[2])*H / 36.5),
                           QPoint(40, (9.5+i[2])*H / 36.5),
-                          QPoint(W-40, (0.5+i[0]*3+i[1]) *H / 36.5),
-                          QPoint(W, (0.5+i[0]*3+i[1])* H/36.5)]
+                          QPoint(W-40, 10+20*i[1]+70*i[0]),
+                          QPoint(W, 10+20*i[1]+70*i[0])]
+                #
+                # points = [QPoint(0, (9.5+i[2])*H / 36.5),
+                #           QPoint(40, (9.5+i[2])*H / 36.5),
+                #           QPoint(W-40, (0.5+i[0]*3+i[1]) *H / 36.5),
+                #           QPoint(W, (0.5+i[0]*3+i[1])* H/36.5)]
                 painter.drawPolyline(QPolygon(points))
         if self.antModule:
             pen.setColor(Qt.darkGray)  # 划线颜色
             painter.setPen(pen)
             for i in self.list:
-                if i[0] == 0:
-                    points = [QPoint(0, H / 12),
-                              QPoint(40, H / 12),
-                              QPoint(W-40,  i[1]*20+190),
-                              QPoint(W,i[1]*20+190)]
-                if i[0] == 1:
-                    points = [QPoint(0, H / 12),
-                              QPoint(40, H / 12),
-                              QPoint(W - 40, i[1] * 20 + 460),
-                              QPoint(W, i[1] * 20 + 460)]
+                points = [QPoint(0, 30+int(i[2])*70),
+                          QPoint(0, 30+int(i[2])*70),
+                          QPoint(W-30,  i[1]*20+190+i[0]*270),
+                          QPoint(W,i[1]*20+190+i[0]*270)]
                 painter.drawPolyline(QPolygon(points))
 
 

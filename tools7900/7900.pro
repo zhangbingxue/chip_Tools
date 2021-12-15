@@ -11,24 +11,37 @@ CONFIG += c++11
 SOURCES += \
     ccid.cpp \
     channel.cpp \
+    connect.cpp \
+    eyediagram.cpp \
     main.cpp \
     mainwindow.cpp \
     paint.cpp \
-    rf.cpp
+    rf.cpp \
+    serdesloop.cpp \
+    sshconsole.cpp \
+    test.cpp
 
 HEADERS += \
     ccid.h \
     channel.h \
+    connect.h \
+    eyediagram.h \
     mainwindow.h \
     paint.h \
-    rf.h
+    rf.h \
+    serdesloop.h \
+    sshconsole.h
 
 FORMS += \
     channel.ui \
+    connect.ui \
     dialog.ui \
+    eyediagram.ui \
     mainwindow.ui \
     paint.ui \
-    rf.ui
+    rf.ui \
+    serdesloop.ui \
+    sshconsole.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
